@@ -17,7 +17,6 @@
            ============================================ */
         :root {
             /* Spacing */
-            --spacing-0: 0px;
             --spacing-05: 4px;
             --spacing-1: 8px;
             --spacing-2: 16px;
@@ -26,7 +25,6 @@
             --spacing-4: 32px;
             --spacing-5: 40px;
             --spacing-10: 80px;
-            
             /* Colors */
             --color-terracotta-600: #c33c1d;
             --color-warm-grey-100: #e9e8e1;
@@ -34,19 +32,12 @@
             --color-neutral-black: #1a1a1a;
             --color-border-secondary: #e2e0d8;
             --color-border-tertiary: #e09282;
-            
             /* Typography */
             --font-headline: 'Delmon Delicate', 'Playfair Display', serif;
             --font-body: 'Noto Sans', sans-serif;
-            
             /* Border Radius */
             --radius-small: 2px;
             --radius-full: 999px;
-            
-            /* Breakpoints */
-            --breakpoint-mobile: 767px;
-            --breakpoint-tablet: 1023px;
-            --breakpoint-desktop: 1439px;
         }
         
         /* ============================================
@@ -92,97 +83,63 @@
         /* ============================================
            TYPOGRAPHY
            ============================================ */
-        .headline-h1 {
+        .headline-h1, .headline-h3, .headline-h4, .headline-h5, .headline-h6, .button-text {
             font-family: var(--font-headline);
-            font-size: 84px;
             font-weight: 400;
+        }
+        
+        .headline-h1 {
+            font-size: 84px;
             line-height: 1.1;
             letter-spacing: 1.68px;
             text-transform: uppercase;
         }
         
         .headline-h3 {
-            font-family: var(--font-headline);
             font-size: 48px;
-            font-weight: 400;
             line-height: 1.1;
             letter-spacing: 0.96px;
             text-transform: uppercase;
         }
         
         .headline-h4 {
-            font-family: var(--font-headline);
             font-size: 39px;
-            font-weight: 400;
             line-height: 1.2;
             letter-spacing: 0.78px;
         }
         
         .headline-h5 {
-            font-family: var(--font-headline);
             font-size: 80px;
-            font-weight: 400;
             line-height: 1.2;
         }
         
         .headline-h6 {
-            font-family: var(--font-headline);
             font-size: 18px;
-            font-weight: 400;
             line-height: 1.2;
             text-transform: uppercase;
         }
         
-        .body-default {
-            font-family: var(--font-body);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-        
         .body-large {
-            font-family: var(--font-body);
             font-size: 18px;
-            font-weight: 400;
-            line-height: 1.5;
         }
         
         .body-small {
-            font-family: var(--font-body);
             font-size: 14px;
-            font-weight: 400;
-            line-height: 1.5;
         }
         
         .title-small {
-            font-family: var(--font-body);
             font-size: 18px;
             font-weight: 700;
             line-height: 1.2;
         }
         
         .button-text {
-            font-family: var(--font-headline);
             font-size: 16px;
-            font-weight: 400;
             line-height: 1;
             letter-spacing: 1.6px;
             text-transform: uppercase;
         }
         
-        /* ============================================
-           LAYOUT UTILITIES
-           ============================================ */
-        .container {
-            width: 100%;
-            max-width: 1360px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-5);
-        }
-        
-        .section {
-            padding: var(--spacing-10) 0;
-        }
         
         /* ============================================
            HEADER
@@ -207,7 +164,6 @@
             width: 118px;
             height: 50px;
             flex-shrink: 0;
-            display: block;
         }
         
         .header__logo-img {
@@ -227,25 +183,23 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: var(--spacing-5);
-            padding-top: 226px;
-            padding-bottom: 56px;
-            box-sizing: border-box;
+            padding: 226px var(--spacing-5) 56px;
         }
         
         .hero__image-container {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            inset: auto 0 0;
             height: 810px;
             overflow: hidden;
         }
         
-        .hero__image {
+        .hero__image, .values__image, .stories__card-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        
+        .hero__image, .about__image {
             object-position: 50% 50%;
             pointer-events: none;
         }
@@ -257,12 +211,10 @@
             max-width: 1360px;
             margin-bottom: -56px;
             padding: 10px 0;
-            box-sizing: border-box;
         }
         
         .hero__text h1 {
             color: var(--color-neutral-white);
-            text-align: left;
             width: 100%;
         }
         
@@ -311,7 +263,7 @@
             cursor: pointer;
             background: transparent;
             color: var(--color-neutral-black);
-            box-sizing: border-box;
+            font-size: 16px;
             gap: 10px;
         }
         
@@ -327,12 +279,14 @@
         /* ============================================
            ABOUT SECTION
            ============================================ */
-        .about {
+        .about, .values {
             padding: var(--spacing-10) var(--spacing-5);
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        
+        .about {
             gap: var(--spacing-10);
         }
         
@@ -344,8 +298,11 @@
             align-items: flex-start;
         }
         
-        .about__title {
+        .about__title, .values__title, .benefits__title, .stories__title {
             color: var(--color-terracotta-600);
+        }
+        
+        .about__title {
             flex-shrink: 0;
             white-space: nowrap;
         }
@@ -358,10 +315,7 @@
             flex-shrink: 0;
         }
         
-        .about__text-container h3 {
-            color: var(--color-neutral-black);
-        }
-        
+        .about__text-container h3,
         .about__text-container p {
             color: var(--color-neutral-black);
         }
@@ -387,24 +341,12 @@
         .about__image {
             position: absolute;
             inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 50% 50%;
-            pointer-events: none;
             border-radius: var(--radius-small);
         }
         
         /* ============================================
            VALUES SECTION
            ============================================ */
-        .values {
-            padding: var(--spacing-10) var(--spacing-5);
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         
         .values__container {
             max-width: 1360px;
@@ -420,26 +362,19 @@
             display: flex;
             flex-direction: column;
             gap: var(--spacing-3);
-            padding: 0;
-            box-sizing: border-box;
         }
         
         .values__title {
-            color: var(--color-terracotta-600);
             letter-spacing: 5.76px;
             line-height: 1;
         }
         
         .values__intro {
             font-size: 18px;
-            line-height: 1.5;
-            width: 100%;
-            min-width: 100%;
         }
         
         .values__details {
             background-color: var(--color-neutral-white);
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             height: 760px;
@@ -447,10 +382,7 @@
             justify-content: space-between;
             max-width: 1360px;
             width: 100%;
-            padding-bottom: var(--spacing-10);
-            padding-top: var(--spacing-2);
-            padding-left: 0;
-            padding-right: 0;
+            padding: var(--spacing-2) 0 var(--spacing-10);
             position: relative;
         }
         
@@ -471,11 +403,6 @@
             border-radius: var(--radius-small);
         }
         
-        .values__image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         
         .values__list {
             position: absolute;
@@ -490,19 +417,12 @@
         }
         
         .values__item-wrapper {
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             gap: var(--spacing-4);
             align-items: flex-end;
             justify-content: center;
-            padding-bottom: var(--spacing-2);
-            padding-top: 0;
-            width: 100%;
-        }
-        
-        .values__item.expanded .values__item-wrapper {
-            padding-bottom: var(--spacing-2);
+            padding: 0 0 var(--spacing-2);
         }
         
         .values__item-header {
@@ -535,7 +455,6 @@
             overflow: hidden;
             transition: max-height 0.4s ease;
             text-align: right;
-            width: 100%;
         }
         
         .values__item.expanded .values__item-description {
@@ -576,7 +495,6 @@
         }
         
         .benefits__title {
-            color: var(--color-terracotta-600);
             margin-bottom: var(--spacing-3);
             letter-spacing: 5.76px;
         }
@@ -585,7 +503,7 @@
             margin-bottom: var(--spacing-5);
         }
         
-        .benefits__button {
+        .benefits__button, .stories__button {
             background-color: var(--color-terracotta-600);
             color: var(--color-neutral-white);
             padding: var(--spacing-2-05) var(--spacing-4);
@@ -595,7 +513,7 @@
             transition: opacity 0.3s ease;
         }
         
-        .benefits__button:hover {
+        .benefits__button:hover, .stories__button:hover {
             opacity: 0.9;
         }
         
@@ -705,9 +623,6 @@
             margin-bottom: var(--spacing-5);
         }
         
-        .stories__title {
-            color: var(--color-terracotta-600);
-        }
         
         .stories__nav {
             display: flex;
@@ -773,11 +688,6 @@
             margin-bottom: var(--spacing-2);
         }
         
-        .stories__card-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         
         .stories__card-content {
             padding-right: var(--spacing-2);
@@ -836,19 +746,6 @@
             text-align: center;
         }
         
-        .stories__button {
-            background-color: var(--color-terracotta-600);
-            color: var(--color-neutral-white);
-            padding: var(--spacing-2-05) var(--spacing-4);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.3s ease;
-        }
-        
-        .stories__button:hover {
-            opacity: 0.9;
-        }
         
         /* ============================================
            FOOTER
@@ -875,7 +772,6 @@
             width: 189px;
             height: 80px;
             flex-shrink: 0;
-            display: block;
             transition: opacity 0.3s ease;
         }
         
@@ -965,8 +861,7 @@
             
             .hero {
                 min-height: 800px;
-                padding-top: 150px;
-                padding-bottom: var(--spacing-5);
+                padding: 150px var(--spacing-5) var(--spacing-5);
             }
             
             .hero__image-container {
@@ -982,7 +877,7 @@
                 gap: var(--spacing-5);
             }
             
-            .about__text-container {
+            .about__text-container, .benefits__content {
                 width: 100%;
             }
             
@@ -1000,17 +895,18 @@
                 flex-direction: column;
             }
             
-            .values__image-wrapper {
+            .values__image-wrapper, .values__list {
                 position: static;
                 width: 100%;
+            }
+            
+            .values__image-wrapper {
                 max-width: 480px;
                 margin: 0 auto var(--spacing-5);
                 transform: rotate(0deg);
             }
             
             .values__list {
-                position: static;
-                width: 100%;
                 max-width: 100%;
             }
             
@@ -1020,7 +916,6 @@
             }
             
             .benefits__content {
-                width: 100%;
                 position: static;
             }
             
@@ -1052,10 +947,6 @@
         
         /* Mobile */
         @media (max-width: 767px) {
-            .container {
-                padding: 0 var(--spacing-3);
-            }
-            
             .headline-h1 {
                 font-size: 48px;
                 letter-spacing: 0.96px;
@@ -1073,19 +964,13 @@
                 font-size: 48px;
             }
             
-            .section {
-                padding: var(--spacing-5) 0;
-            }
-            
             .header {
                 padding: var(--spacing-2) var(--spacing-3);
             }
             
             .hero {
                 min-height: 600px;
-                padding: var(--spacing-3);
-                padding-top: 100px;
-                padding-bottom: var(--spacing-3);
+                padding: 100px var(--spacing-3) var(--spacing-3);
             }
             
             .hero__image-container {
@@ -1106,8 +991,11 @@
                 font-size: 14px;
             }
             
-            .about {
+            .about, .values, .benefits {
                 padding: var(--spacing-5) var(--spacing-3);
+            }
+            
+            .about {
                 gap: var(--spacing-5);
             }
             
@@ -1124,20 +1012,12 @@
                 height: auto;
             }
             
-            .values {
-                padding: var(--spacing-5) var(--spacing-3);
-            }
-            
             .values__header {
                 margin-bottom: var(--spacing-5);
             }
             
             .values__item-title {
                 font-size: 48px;
-            }
-            
-            .benefits {
-                padding: var(--spacing-5) var(--spacing-3);
             }
             
             .benefits__grid {
@@ -1244,7 +1124,7 @@
                         <img src="assets/images/values-image.png" alt="Our Values" class="values__image">
                     </div>
                     <div class="values__list">
-                    <div class="values__item expanded">
+                    <div class="values__item expanded" data-value-image="assets/images/values-image.png">
                         <div class="values__item-wrapper">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title">Authenticity</h3>
@@ -1257,7 +1137,7 @@
                     </div>
                     <div class="values__divider"></div>
                     
-                    <div class="values__item">
+                    <div class="values__item" data-value-image="assets/images/values-image.png">
                         <div class="values__item-header">
                             <h3 class="headline-h5 values__item-title">Open Minded</h3>
                             <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
@@ -1268,7 +1148,7 @@
                     </div>
                     <div class="values__divider"></div>
                     
-                    <div class="values__item">
+                    <div class="values__item" data-value-image="assets/images/values-image.png">
                         <div class="values__item-header">
                             <h3 class="headline-h5 values__item-title">Human Centric</h3>
                             <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
@@ -1279,7 +1159,7 @@
                     </div>
                     <div class="values__divider"></div>
                     
-                    <div class="values__item">
+                    <div class="values__item" data-value-image="assets/images/values-image.png">
                         <div class="values__item-header">
                             <h3 class="headline-h5 values__item-title">Trustworthy</h3>
                             <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
@@ -1512,8 +1392,8 @@
                     <a href="#" class="footer__social-link" aria-label="Facebook">
                         <img src="assets/icons/social-facebook.svg" alt="Facebook" class="footer__social-icon">
                     </a>
-                    <a href="#" class="footer__social-link" aria-label="Instagram">
-                        <img src="assets/icons/social-instagram.svg" alt="Instagram" class="footer__social-icon">
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <img src="assets/icons/social-twitter.svg" alt="Twitter" class="footer__social-icon">
                     </a>
                     <a href="#" class="footer__social-link" aria-label="YouTube">
                         <img src="assets/icons/social-youtube.svg" alt="YouTube" class="footer__social-icon">
@@ -1541,8 +1421,6 @@
         const tabNav = document.getElementById('tabNav');
         const sections = document.querySelectorAll('section[id]');
         const tabItems = document.querySelectorAll('.tab-nav__item');
-        
-        let lastScrollTop = 0;
         let headerHeight = header.offsetHeight;
         
         window.addEventListener('scroll', () => {
@@ -1559,7 +1437,6 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (scrollTop >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
@@ -1571,8 +1448,6 @@
                     item.classList.add('active');
                 }
             });
-            
-            lastScrollTop = scrollTop;
         });
         
         // Smooth scroll to sections
@@ -1596,27 +1471,25 @@
         // VALUES ACCORDION
         // ============================================
         const valuesItems = document.querySelectorAll('.values__item');
+        const valuesImage = document.querySelector('.values__image');
         
         valuesItems.forEach(item => {
-            const header = item.querySelector('.values__item-header');
-            
-            header.addEventListener('click', () => {
-                // If clicking on already expanded item, do nothing
-                if (item.classList.contains('expanded')) {
-                    return;
-                }
+            item.querySelector('.values__item-header').addEventListener('click', () => {
+                if (item.classList.contains('expanded')) return;
                 
-                // Close all items
                 valuesItems.forEach(otherItem => {
                     otherItem.classList.remove('expanded');
-                    const icon = otherItem.querySelector('.values__item-icon');
-                    icon.src = 'assets/icons/expand-icon.svg';
+                    otherItem.querySelector('.values__item-icon').src = 'assets/icons/expand-icon.svg';
                 });
                 
-                // Open clicked item
                 item.classList.add('expanded');
-                const icon = item.querySelector('.values__item-icon');
-                icon.src = 'assets/icons/collapse-icon.svg';
+                item.querySelector('.values__item-icon').src = 'assets/icons/collapse-icon.svg';
+                
+                // Update image based on selected item
+                const newImageSrc = item.getAttribute('data-value-image');
+                if (newImageSrc && valuesImage) {
+                    valuesImage.src = newImageSrc;
+                }
             });
         });
         
@@ -1627,8 +1500,6 @@
         const prevButton = document.getElementById('storiesPrev');
         const nextButton = document.getElementById('storiesNext');
         const progress = document.getElementById('storiesProgress');
-        
-        let currentScroll = 0;
         
         function updateProgress() {
             const maxScroll = carousel.scrollWidth - carousel.clientWidth;
@@ -1656,29 +1527,17 @@
         
         // Touch support for carousel
         let touchStartX = 0;
-        let touchEndX = 0;
         
         carousel.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
         });
         
         carousel.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-        
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    scrollCarousel('next');
-                } else {
-                    scrollCarousel('prev');
-                }
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) {
+                scrollCarousel(diff > 0 ? 'next' : 'prev');
             }
-        }
+        });
         
         // ============================================
         // RESPONSIVE UTILITIES
@@ -1688,11 +1547,7 @@
             updateProgress();
         });
         
-        // Initialize on load
-        window.addEventListener('load', () => {
-            updateProgress();
-        });
+        window.addEventListener('load', updateProgress);
     </script>
 </body>
 </html>
-
