@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Primeclass VIP Lounge - Premium airport lounge experience across 19 countries with personalized services and authentic hospitality.">
+    <title>Our Story - Primeclass VIP Lounge</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           CSS VARIABLES - Design Tokens from Figma
+           ============================================ */
+        :root {
+            /* Spacing */
+            --spacing-0: 0px;
+            --spacing-05: 4px;
+            --spacing-1: 8px;
+            --spacing-2: 16px;
+            --spacing-2-05: 20px;
+            --spacing-3: 24px;
+            --spacing-4: 32px;
+            --spacing-5: 40px;
+            --spacing-10: 80px;
+            
+            /* Colors */
+            --color-terracotta-600: #c33c1d;
+            --color-warm-grey-100: #e9e8e1;
+            --color-neutral-white: #ffffff;
+            --color-neutral-black: #1a1a1a;
+            --color-border-secondary: #e2e0d8;
+            --color-border-tertiary: #e09282;
+            
+            /* Typography */
+            --font-headline: 'Delmon Delicate', 'Playfair Display', serif;
+            --font-body: 'Noto Sans', sans-serif;
+            
+            /* Border Radius */
+            --radius-small: 2px;
+            --radius-full: 999px;
+            
+            /* Breakpoints */
+            --breakpoint-mobile: 767px;
+            --breakpoint-tablet: 1023px;
+            --breakpoint-desktop: 1439px;
+        }
+        
+        /* ============================================
+           RESET & BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--color-neutral-black);
+            background-color: var(--color-neutral-white);
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        .headline-h1 {
+            font-family: var(--font-headline);
+            font-size: 84px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 1.68px;
+            text-transform: uppercase;
+        }
+        
+        .headline-h3 {
+            font-family: var(--font-headline);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 0.96px;
+            text-transform: uppercase;
+        }
+        
+        .headline-h4 {
+            font-family: var(--font-headline);
+            font-size: 39px;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: 0.78px;
+        }
+        
+        .headline-h5 {
+            font-family: var(--font-headline);
+            font-size: 80px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        
+        .headline-h6 {
+            font-family: var(--font-headline);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        
+        .body-default {
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .body-large {
+            font-family: var(--font-body);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .body-small {
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .title-small {
+            font-family: var(--font-body);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .button-text {
+            font-family: var(--font-headline);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+        
+        /* ============================================
+           LAYOUT UTILITIES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-5);
+        }
+        
+        .section {
+            padding: var(--spacing-10) 0;
+        }
+        
+        /* ============================================
+           HEADER
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--color-terracotta-600);
+            padding: var(--spacing-2) var(--spacing-5);
+            z-index: 1000;
+        }
+        
+        .header__nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header__logo {
+            width: 118px;
+            height: 50px;
+            flex-shrink: 0;
+            display: block;
+        }
+        
+        .header__logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* ============================================
+           HERO BANNER
+           ============================================ */
+        .hero {
+            position: relative;
+            background-color: var(--color-terracotta-600);
+            min-height: 1090px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: var(--spacing-5);
+            padding-top: 226px;
+            padding-bottom: 56px;
+            box-sizing: border-box;
+        }
+        
+        .hero__image-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 810px;
+            overflow: hidden;
+        }
+        
+        .hero__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            pointer-events: none;
+        }
+        
+        .hero__text {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1360px;
+            margin-bottom: -56px;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+        
+        .hero__text h1 {
+            color: var(--color-neutral-white);
+            text-align: left;
+            width: 100%;
+        }
+        
+        /* ============================================
+           TAB NAVIGATION
+           ============================================ */
+        .tab-nav {
+            background-color: var(--color-neutral-white);
+            border-bottom: 1px solid var(--color-border-secondary);
+            position: sticky;
+            top: 82px;
+            z-index: 999;
+            transition: top 0.3s ease;
+        }
+        
+        .tab-nav.scrolled {
+            top: 0;
+        }
+        
+        .tab-nav__container {
+            display: flex;
+            align-items: center;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-5);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            flex: 1;
+        }
+        
+        .tab-nav__container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .tab-nav__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-4) var(--spacing-3);
+            min-width: 100px;
+            flex-shrink: 0;
+            border: none;
+            border-bottom: 1px solid var(--color-border-secondary);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            cursor: pointer;
+            background: transparent;
+            color: var(--color-neutral-black);
+            box-sizing: border-box;
+            gap: 10px;
+        }
+        
+        .tab-nav__item:hover {
+            color: var(--color-terracotta-600);
+        }
+        
+        .tab-nav__item.active {
+            border-bottom: 2px solid var(--color-terracotta-600);
+            color: var(--color-terracotta-600);
+        }
+        
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about {
+            padding: var(--spacing-10) var(--spacing-5);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-10);
+        }
+        
+        .about__content {
+            max-width: 1360px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .about__title {
+            color: var(--color-terracotta-600);
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        
+        .about__text-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-5);
+            width: 670px;
+            flex-shrink: 0;
+        }
+        
+        .about__text-container h3 {
+            color: var(--color-neutral-black);
+        }
+        
+        .about__text-container p {
+            color: var(--color-neutral-black);
+        }
+        
+        .about__image-wrapper {
+            max-width: 1360px;
+            width: 100%;
+            height: 680px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .about__image-container {
+            width: 100%;
+            aspect-ratio: 1360 / 800;
+            border-radius: var(--radius-small);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .about__image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            pointer-events: none;
+            border-radius: var(--radius-small);
+        }
+        
+        /* ============================================
+           VALUES SECTION
+           ============================================ */
+        .values {
+            padding: var(--spacing-10) var(--spacing-5);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .values__container {
+            max-width: 1360px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .values__header {
+            max-width: 441px;
+            width: 441px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-3);
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .values__title {
+            color: var(--color-terracotta-600);
+            letter-spacing: 5.76px;
+            line-height: 1;
+        }
+        
+        .values__intro {
+            font-size: 18px;
+            line-height: 1.5;
+            width: 100%;
+            min-width: 100%;
+        }
+        
+        .values__details {
+            background-color: var(--color-neutral-white);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 760px;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1360px;
+            width: 100%;
+            padding-bottom: var(--spacing-10);
+            padding-top: var(--spacing-2);
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+        }
+        
+        .values__details-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+        }
+        
+        .values__image-wrapper {
+            position: absolute;
+            left: 0;
+            top: -17px;
+            width: 480px;
+            height: 636px;
+            transform: rotate(-2deg);
+            overflow: hidden;
+            border-radius: var(--radius-small);
+        }
+        
+        .values__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .values__list {
+            position: absolute;
+            right: 0;
+            top: 58px;
+            width: 784px;
+            max-width: calc(100% - 500px);
+        }
+        
+        .values__item {
+            position: relative;
+        }
+        
+        .values__item-wrapper {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4);
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: var(--spacing-2);
+            padding-top: 0;
+            width: 100%;
+        }
+        
+        .values__item.expanded .values__item-wrapper {
+            padding-bottom: var(--spacing-2);
+        }
+        
+        .values__item-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 16px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        
+        .values__item-header:hover {
+            opacity: 0.8;
+        }
+        
+        .values__item-title {
+            color: var(--color-terracotta-600);
+            text-align: right;
+            flex: 1;
+        }
+        
+        .values__item-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+        
+        .values__item-description {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            text-align: right;
+            width: 100%;
+        }
+        
+        .values__item.expanded .values__item-description {
+            max-height: 200px;
+        }
+        
+        .values__item-text {
+            max-width: 441px;
+            margin-left: auto;
+        }
+        
+        .values__divider {
+            height: 1px;
+            background-color: var(--color-border-secondary);
+            margin: var(--spacing-2) 0;
+        }
+        
+        /* ============================================
+           BENEFITS SECTION
+           ============================================ */
+        .benefits {
+            padding: var(--spacing-10) var(--spacing-5);
+        }
+        
+        .benefits__container {
+            max-width: 1360px;
+            margin: 0 auto;
+            display: flex;
+            gap: 136px;
+        }
+        
+        .benefits__content {
+            width: 440px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 100px;
+            align-self: flex-start;
+        }
+        
+        .benefits__title {
+            color: var(--color-terracotta-600);
+            margin-bottom: var(--spacing-3);
+            letter-spacing: 5.76px;
+        }
+        
+        .benefits__description {
+            margin-bottom: var(--spacing-5);
+        }
+        
+        .benefits__button {
+            background-color: var(--color-terracotta-600);
+            color: var(--color-neutral-white);
+            padding: var(--spacing-2-05) var(--spacing-4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+        
+        .benefits__button:hover {
+            opacity: 0.9;
+        }
+        
+        .benefits__grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            align-items: start;
+        }
+        
+        .benefits__grid-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .benefits__grid-column:nth-child(2) {
+            margin-top: 92px;
+        }
+        
+        .benefits__grid-column:nth-child(3) {
+            margin-top: 32px;
+        }
+        
+        .benefits__amenity {
+            aspect-ratio: 1;
+            background-color: var(--color-warm-grey-100);
+            padding: var(--spacing-3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .benefits__amenity:hover {
+            background-color: var(--color-terracotta-600);
+        }
+        
+        .benefits__amenity-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-2);
+            transition: opacity 0.3s ease;
+        }
+        
+        .benefits__amenity:hover .benefits__amenity-content {
+            opacity: 0;
+        }
+        
+        .benefits__amenity-icon {
+            width: 80px;
+            height: 80px;
+            opacity: 0.8;
+            filter: invert(35%) sepia(68%) saturate(1587%) hue-rotate(343deg) brightness(88%) contrast(90%);
+        }
+        
+        .benefits__amenity-title {
+            font-family: var(--font-headline);
+            font-size: 16.92px;
+            line-height: 1.2;
+            letter-spacing: 0.34px;
+        }
+        
+        .benefits__amenity-description {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: var(--color-neutral-white);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        .benefits__amenity:hover .benefits__amenity-description {
+            opacity: 1;
+        }
+        
+        /* ============================================
+           FEATURED STORIES SECTION
+           ============================================ */
+        .stories {
+            padding: var(--spacing-10) 0;
+        }
+        
+        .stories__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-5);
+            margin-bottom: var(--spacing-5);
+        }
+        
+        .stories__title {
+            color: var(--color-terracotta-600);
+        }
+        
+        .stories__nav {
+            display: flex;
+            gap: var(--spacing-1);
+        }
+        
+        .stories__nav-button {
+            width: 56px;
+            height: 56px;
+            border: 1px solid var(--color-terracotta-600);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stories__nav-button:hover {
+            background-color: var(--color-terracotta-600);
+        }
+        
+        .stories__nav-button:hover img {
+            filter: brightness(0) invert(1);
+        }
+        
+        .stories__nav-button--prev {
+            transform: rotate(180deg) scaleY(-1);
+        }
+        
+        .stories__nav-icon {
+            width: 18.67px;
+            height: 18.67px;
+        }
+        
+        .stories__carousel-wrapper {
+            margin-bottom: var(--spacing-4);
+        }
+        
+        .stories__carousel {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 0 var(--spacing-5);
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .stories__carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .stories__card {
+            flex: 0 0 328px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stories__card-image-wrapper {
+            aspect-ratio: 452 / 568;
+            border-radius: var(--radius-small);
+            overflow: hidden;
+            margin-bottom: var(--spacing-2);
+        }
+        
+        .stories__card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .stories__card-content {
+            padding-right: var(--spacing-2);
+        }
+        
+        .stories__card-topic {
+            color: var(--color-terracotta-600);
+            margin-bottom: var(--spacing-1);
+        }
+        
+        .stories__card-title {
+            margin-bottom: var(--spacing-3);
+        }
+        
+        .stories__card-meta {
+            display: flex;
+            gap: var(--spacing-2);
+        }
+        
+        .stories__card-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-05);
+        }
+        
+        .stories__card-meta-icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .stories__indicator {
+            width: 900px;
+            max-width: 100%;
+            margin: 0 auto var(--spacing-3);
+            padding: var(--spacing-3) 0;
+        }
+        
+        .stories__indicator-track {
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-warm-grey-100);
+            position: relative;
+        }
+        
+        .stories__indicator-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: var(--color-terracotta-600);
+            width: 65%;
+            transition: width 0.3s ease;
+        }
+        
+        .stories__cta {
+            text-align: center;
+        }
+        
+        .stories__button {
+            background-color: var(--color-terracotta-600);
+            color: var(--color-neutral-white);
+            padding: var(--spacing-2-05) var(--spacing-4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+        
+        .stories__button:hover {
+            opacity: 0.9;
+        }
+        
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background-color: var(--color-terracotta-600);
+            color: var(--color-neutral-white);
+        }
+        
+        .footer__content {
+            padding: 100px var(--spacing-5) var(--spacing-3);
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+        
+        .footer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+        
+        .footer__logo {
+            width: 189px;
+            height: 80px;
+            flex-shrink: 0;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer__logo:hover {
+            opacity: 0.9;
+        }
+        
+        .footer__logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .footer__social-link {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer__social-link:hover {
+            opacity: 0.8;
+        }
+        
+        .footer__social-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .footer__divider {
+            height: 1px;
+            background-color: var(--color-border-tertiary);
+            margin-bottom: 15px;
+        }
+        
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer__links {
+            display: flex;
+            gap: 31px;
+        }
+        
+        .footer__link {
+            font-size: 13px;
+            line-height: 1.2;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer__link:hover {
+            opacity: 0.8;
+        }
+        
+        .footer__copyright {
+            font-family: 'Roboto', var(--font-body);
+            font-size: 16px;
+            line-height: 44px;
+        }
+        
+        /* ============================================
+           RESPONSIVE STYLES
+           ============================================ */
+        
+        /* Tablet */
+        @media (max-width: 1023px) {
+            .headline-h1 {
+                font-size: 60px;
+            }
+            
+            .headline-h3 {
+                font-size: 40px;
+            }
+            
+            .headline-h5 {
+                font-size: 60px;
+            }
+            
+            .hero {
+                min-height: 800px;
+                padding-top: 150px;
+                padding-bottom: var(--spacing-5);
+            }
+            
+            .hero__image-container {
+                height: 600px;
+            }
+            
+            .hero__text {
+                margin-bottom: 0;
+            }
+            
+            .about__content {
+                flex-direction: column;
+                gap: var(--spacing-5);
+            }
+            
+            .about__text-container {
+                width: 100%;
+            }
+            
+            .about__image-wrapper {
+                height: auto;
+            }
+            
+            .values__details {
+                min-height: auto;
+            }
+            
+            .values__details-container {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .values__image-wrapper {
+                position: static;
+                width: 100%;
+                max-width: 480px;
+                margin: 0 auto var(--spacing-5);
+                transform: rotate(0deg);
+            }
+            
+            .values__list {
+                position: static;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .benefits__container {
+                flex-direction: column;
+                gap: var(--spacing-5);
+            }
+            
+            .benefits__content {
+                width: 100%;
+                position: static;
+            }
+            
+            .benefits__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .benefits__grid-column:nth-child(2),
+            .benefits__grid-column:nth-child(3) {
+                margin-top: 0;
+            }
+            
+            .footer__top {
+                flex-direction: column;
+                gap: var(--spacing-5);
+            }
+            
+            .footer__bottom {
+                flex-direction: column;
+                gap: var(--spacing-3);
+                align-items: flex-start;
+            }
+            
+            .footer__links {
+                flex-wrap: wrap;
+                gap: var(--spacing-2);
+            }
+        }
+        
+        /* Mobile */
+        @media (max-width: 767px) {
+            .container {
+                padding: 0 var(--spacing-3);
+            }
+            
+            .headline-h1 {
+                font-size: 48px;
+                letter-spacing: 0.96px;
+            }
+            
+            .headline-h3 {
+                font-size: 32px;
+            }
+            
+            .headline-h4 {
+                font-size: 28px;
+            }
+            
+            .headline-h5 {
+                font-size: 48px;
+            }
+            
+            .section {
+                padding: var(--spacing-5) 0;
+            }
+            
+            .header {
+                padding: var(--spacing-2) var(--spacing-3);
+            }
+            
+            .hero {
+                min-height: 600px;
+                padding: var(--spacing-3);
+                padding-top: 100px;
+                padding-bottom: var(--spacing-3);
+            }
+            
+            .hero__image-container {
+                height: 400px;
+            }
+            
+            .hero__text {
+                margin-bottom: 0;
+            }
+            
+            .tab-nav__container {
+                padding: 0 var(--spacing-3);
+            }
+            
+            .tab-nav__item {
+                padding: var(--spacing-3) var(--spacing-2);
+                min-width: 80px;
+                font-size: 14px;
+            }
+            
+            .about {
+                padding: var(--spacing-5) var(--spacing-3);
+                gap: var(--spacing-5);
+            }
+            
+            .about__content {
+                flex-direction: column;
+                gap: var(--spacing-3);
+            }
+            
+            .about__text-container {
+                width: 100%;
+            }
+            
+            .about__image-wrapper {
+                height: auto;
+            }
+            
+            .values {
+                padding: var(--spacing-5) var(--spacing-3);
+            }
+            
+            .values__header {
+                margin-bottom: var(--spacing-5);
+            }
+            
+            .values__item-title {
+                font-size: 48px;
+            }
+            
+            .benefits {
+                padding: var(--spacing-5) var(--spacing-3);
+            }
+            
+            .benefits__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stories {
+                padding: var(--spacing-5) 0;
+            }
+            
+            .stories__header {
+                padding: 0 var(--spacing-3);
+                margin-bottom: var(--spacing-3);
+            }
+            
+            .stories__title {
+                font-size: 32px;
+            }
+            
+            .stories__nav-button {
+                width: 48px;
+                height: 48px;
+            }
+            
+            .stories__carousel {
+                padding: 0 var(--spacing-3);
+            }
+            
+            .stories__card {
+                flex: 0 0 280px;
+            }
+            
+            .stories__indicator {
+                width: 100%;
+                padding: var(--spacing-2) var(--spacing-3);
+            }
+            
+            .footer__content {
+                padding: var(--spacing-5) var(--spacing-3) var(--spacing-3);
+            }
+            
+            .footer__top {
+                margin-bottom: var(--spacing-5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="header__nav">
+            <a href="#" class="header__logo" aria-label="Primeclass">
+                <img src="assets/icons/logo.svg" alt="Primeclass" class="header__logo-img">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="hero">
+        <div class="hero__image-container">
+            <img src="assets/images/hero-background.png" alt="" class="hero__image">
+        </div>
+        <div class="hero__text">
+            <h1 class="headline-h1">Our story</h1>
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav" id="tabNav">
+        <div class="tab-nav__container">
+            <button class="tab-nav__item body-default active" data-target="about">About</button>
+            <button class="tab-nav__item body-default" data-target="values">Values</button>
+            <button class="tab-nav__item body-default" data-target="benefits">Benefits</button>
+            <button class="tab-nav__item body-default" data-target="stories">Featured stories</button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__content">
+            <h2 class="headline-h3 about__title">About</h2>
+            <div class="about__text-container">
+                <h3 class="headline-h4">With nearly 90 lounges across 19 countries, we are proud to be a leading operator of airport services.</h3>
+                <p class="body-default">We believe personalised services and authenticity make every moment special. We know that those small touches create lasting connections to elevate the journey.</p>
+            </div>
+        </div>
+        <div class="about__image-wrapper">
+            <div class="about__image-container">
+                <img src="assets/images/about-image.png" alt="" class="about__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values" id="values">
+        <div class="values__container">
+            <div class="values__header">
+                <h2 class="headline-h3 values__title">Values</h2>
+                <p class="values__intro body-large">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+            </div>
+            <div class="values__details">
+                <div class="values__details-container">
+                    <div class="values__image-wrapper">
+                        <img src="assets/images/values-image.png" alt="Our Values" class="values__image">
+                    </div>
+                    <div class="values__list">
+                    <div class="values__item expanded">
+                        <div class="values__item-wrapper">
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title">Authenticity</h3>
+                                <img src="assets/icons/collapse-icon.svg" alt="Collapse" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="values__divider"></div>
+                    
+                    <div class="values__item">
+                        <div class="values__item-header">
+                            <h3 class="headline-h5 values__item-title">Open Minded</h3>
+                            <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                        </div>
+                        <div class="values__item-description">
+                            <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                        </div>
+                    </div>
+                    <div class="values__divider"></div>
+                    
+                    <div class="values__item">
+                        <div class="values__item-header">
+                            <h3 class="headline-h5 values__item-title">Human Centric</h3>
+                            <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                        </div>
+                        <div class="values__item-description">
+                            <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                        </div>
+                    </div>
+                    <div class="values__divider"></div>
+                    
+                    <div class="values__item">
+                        <div class="values__item-header">
+                            <h3 class="headline-h5 values__item-title">Trustworthy</h3>
+                            <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                        </div>
+                        <div class="values__item-description">
+                            <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="benefits__container">
+            <div class="benefits__content">
+                <h2 class="headline-h3 benefits__title">Benifits</h2>
+                <div class="benefits__description body-large">
+                    <p>Our premium experience design is built around lifestyle-driven choices, ensuring that every aspect of the traveler's journey is thoughtfully planned.</p>
+                    <p>&nbsp;</p>
+                    <p>From relaxation spaces to curated culinary offerings, Primeclass's globally curated journey provides an unparalleled sense of ease and sophistication.</p>
+                </div>
+                <button class="benefits__button button-text">Discover all our lounges</button>
+            </div>
+            <div class="benefits__grid">
+                <div class="benefits__grid-column">
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-1.svg" alt="A Warm Welcome" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">A Warm<br>Welcome</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Our team greets you with genuine warmth and hospitality from the moment you arrive.</p>
+                        </div>
+                    </div>
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-2.svg" alt="Open Buffet" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Open Buffet</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Enjoy a wide selection of fresh and delicious dishes prepared by our culinary team.</p>
+                        </div>
+                    </div>
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-3.svg" alt="Soft Beverages" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Soft Beverages</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Refresh yourself with a variety of soft drinks, juices, and specialty beverages.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits__grid-column">
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-2.svg" alt="Alcohol" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Alcohol</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>A selection of wine, beers, spirits and soft drinks are available.</p>
+                        </div>
+                    </div>
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-3.svg" alt="Restroom" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Restroom</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Clean and modern facilities designed for your comfort and convenience.</p>
+                        </div>
+                    </div>
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-1.svg" alt="Wi-Fi" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Wi-Fi</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Stay connected with complimentary high-speed wireless internet access.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits__grid-column">
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-3.svg" alt="Telephone" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Telephone</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Private telephone services available for your business and personal calls.</p>
+                        </div>
+                    </div>
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-2.svg" alt="Printer" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Printer</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Print, scan, and copy services to support your business needs while traveling.</p>
+                        </div>
+                    </div>
+                    <div class="benefits__amenity">
+                        <div class="benefits__amenity-content">
+                            <img src="assets/icons/amenity-icon-1.svg" alt="Newspaper & Magazine" class="benefits__amenity-icon">
+                            <p class="benefits__amenity-title">Newspaper & Magazine</p>
+                        </div>
+                        <div class="benefits__amenity-description">
+                            <p>Browse through a curated selection of international newspapers and magazines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section class="stories" id="stories">
+        <div class="stories__header">
+            <h2 class="headline-h3 stories__title">Featured stories</h2>
+            <div class="stories__nav">
+                <button class="stories__nav-button stories__nav-button--prev" id="storiesPrev">
+                    <img src="assets/icons/arrow-forward.svg" alt="Previous" class="stories__nav-icon">
+                </button>
+                <button class="stories__nav-button stories__nav-button--next" id="storiesNext">
+                    <img src="assets/icons/arrow-forward.svg" alt="Next" class="stories__nav-icon">
+                </button>
+            </div>
+        </div>
+        <div class="stories__carousel-wrapper">
+            <div class="stories__carousel" id="storiesCarousel">
+                <article class="stories__card">
+                    <div class="stories__card-image-wrapper">
+                        <img src="assets/images/story-card-1.png" alt="Story" class="stories__card-image">
+                    </div>
+                    <div class="stories__card-content">
+                        <p class="headline-h6 stories__card-topic">Topics</p>
+                        <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                        <div class="stories__card-meta">
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                <span class="body-small">8mins</span>
+                            </div>
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                <span class="body-small">13 Aug 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="stories__card">
+                    <div class="stories__card-image-wrapper">
+                        <img src="assets/images/story-card-2.png" alt="Story" class="stories__card-image">
+                    </div>
+                    <div class="stories__card-content">
+                        <p class="headline-h6 stories__card-topic">Topics</p>
+                        <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                        <div class="stories__card-meta">
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                <span class="body-small">8mins</span>
+                            </div>
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                <span class="body-small">13 Aug 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="stories__card">
+                    <div class="stories__card-image-wrapper">
+                        <img src="assets/images/story-card-3.png" alt="Story" class="stories__card-image">
+                    </div>
+                    <div class="stories__card-content">
+                        <p class="headline-h6 stories__card-topic">Topics</p>
+                        <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                        <div class="stories__card-meta">
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                <span class="body-small">8mins</span>
+                            </div>
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                <span class="body-small">13 Aug 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="stories__card">
+                    <div class="stories__card-image-wrapper">
+                        <img src="assets/images/story-card-4.png" alt="Story" class="stories__card-image">
+                    </div>
+                    <div class="stories__card-content">
+                        <p class="headline-h6 stories__card-topic">Topics</p>
+                        <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                        <div class="stories__card-meta">
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                <span class="body-small">8mins</span>
+                            </div>
+                            <div class="stories__card-meta-item">
+                                <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                <span class="body-small">13 Aug 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="stories__indicator">
+            <div class="stories__indicator-track">
+                <div class="stories__indicator-progress" id="storiesProgress"></div>
+            </div>
+        </div>
+        <div class="stories__cta">
+            <button class="stories__button button-text">See All</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <a href="#" class="footer__logo" aria-label="Primeclass">
+                    <img src="assets/icons/logo.svg" alt="Primeclass" class="footer__logo-img">
+                </a>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <img src="assets/icons/social-facebook.svg" alt="Facebook" class="footer__social-icon">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <img src="assets/icons/social-instagram.svg" alt="Instagram" class="footer__social-icon">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="YouTube">
+                        <img src="assets/icons/social-youtube.svg" alt="YouTube" class="footer__social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__bottom">
+                <nav class="footer__links">
+                    <a href="#" class="footer__link">Privacy policy</a>
+                    <a href="#" class="footer__link">Terms & Conditions</a>
+                    <a href="#" class="footer__link">Legal notices</a>
+                    <a href="#" class="footer__link">Modern slavery statement</a>
+                </nav>
+                <p class="footer__copyright">© 2025 Primeclass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // STICKY NAVIGATION
+        // ============================================
+        const header = document.getElementById('header');
+        const tabNav = document.getElementById('tabNav');
+        const sections = document.querySelectorAll('section[id]');
+        const tabItems = document.querySelectorAll('.tab-nav__item');
+        
+        let lastScrollTop = 0;
+        let headerHeight = header.offsetHeight;
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Update sticky nav position
+            if (scrollTop > headerHeight) {
+                tabNav.classList.add('scrolled');
+            } else {
+                tabNav.classList.remove('scrolled');
+            }
+            
+            // Update active tab based on scroll position
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollTop >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tabItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-target') === current) {
+                    item.classList.add('active');
+                }
+            });
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        // Smooth scroll to sections
+        tabItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - tabNav.offsetHeight - 10;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // ============================================
+        // VALUES ACCORDION
+        // ============================================
+        const valuesItems = document.querySelectorAll('.values__item');
+        
+        valuesItems.forEach(item => {
+            const header = item.querySelector('.values__item-header');
+            
+            header.addEventListener('click', () => {
+                // If clicking on already expanded item, do nothing
+                if (item.classList.contains('expanded')) {
+                    return;
+                }
+                
+                // Close all items
+                valuesItems.forEach(otherItem => {
+                    otherItem.classList.remove('expanded');
+                    const icon = otherItem.querySelector('.values__item-icon');
+                    icon.src = 'assets/icons/expand-icon.svg';
+                });
+                
+                // Open clicked item
+                item.classList.add('expanded');
+                const icon = item.querySelector('.values__item-icon');
+                icon.src = 'assets/icons/collapse-icon.svg';
+            });
+        });
+        
+        // ============================================
+        // FEATURED STORIES CAROUSEL
+        // ============================================
+        const carousel = document.getElementById('storiesCarousel');
+        const prevButton = document.getElementById('storiesPrev');
+        const nextButton = document.getElementById('storiesNext');
+        const progress = document.getElementById('storiesProgress');
+        
+        let currentScroll = 0;
+        
+        function updateProgress() {
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            const scrollPercentage = (carousel.scrollLeft / maxScroll) * 100;
+            progress.style.width = scrollPercentage + '%';
+        }
+        
+        function scrollCarousel(direction) {
+            const cardWidth = 328 + 16; // card width + gap
+            const scrollAmount = direction === 'next' ? cardWidth : -cardWidth;
+            
+            carousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+        
+        prevButton.addEventListener('click', () => scrollCarousel('prev'));
+        nextButton.addEventListener('click', () => scrollCarousel('next'));
+        
+        carousel.addEventListener('scroll', updateProgress);
+        
+        // Initialize progress
+        updateProgress();
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    scrollCarousel('next');
+                } else {
+                    scrollCarousel('prev');
+                }
+            }
+        }
+        
+        // ============================================
+        // RESPONSIVE UTILITIES
+        // ============================================
+        window.addEventListener('resize', () => {
+            headerHeight = header.offsetHeight;
+            updateProgress();
+        });
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
+
