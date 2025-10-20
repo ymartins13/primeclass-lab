@@ -228,10 +228,11 @@
             top: 82px;
             z-index: 999;
             transition: top 0.3s ease;
+            padding: 0 var(--spacing-5);
         }
         
         .tab-nav.scrolled {
-            top: 0;
+            top: 82px;
         }
         
         .tab-nav__container {
@@ -239,7 +240,6 @@
             align-items: center;
             max-width: 1360px;
             margin: 0 auto;
-            padding: 0 var(--spacing-5);
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             flex: 1;
@@ -257,7 +257,7 @@
             min-width: 100px;
             flex-shrink: 0;
             border: none;
-            border-bottom: 1px solid var(--color-border-secondary);
+            border-bottom: 2px solid transparent;
             transition: all 0.3s ease;
             white-space: nowrap;
             cursor: pointer;
@@ -272,7 +272,7 @@
         }
         
         .tab-nav__item.active {
-            border-bottom: 2px solid var(--color-terracotta-600);
+            border-bottom-color: var(--color-terracotta-600);
             color: var(--color-terracotta-600);
         }
         
@@ -419,12 +419,10 @@
         .values__item-wrapper {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-4);
             align-items: flex-end;
             justify-content: center;
-            padding: 0 0 var(--spacing-2);
         }
-        
+
         .values__item-header {
             display: flex;
             align-items: center;
@@ -632,20 +630,14 @@
         .stories__nav-button {
             width: 56px;
             height: 56px;
-            border: 1px solid var(--color-terracotta-600);
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
+            border: none;
+            background: none;
+            padding: 0;
+            transition: opacity 0.3s ease;
         }
         
         .stories__nav-button:hover {
-            background-color: var(--color-terracotta-600);
-        }
-        
-        .stories__nav-button:hover img {
-            filter: brightness(0) invert(1);
+            opacity: 0.8;
         }
         
         .stories__nav-button--prev {
@@ -653,8 +645,8 @@
         }
         
         .stories__nav-icon {
-            width: 18.67px;
-            height: 18.67px;
+            width: 100%;
+            height: 100%;
         }
         
         .stories__carousel-wrapper {
@@ -1125,7 +1117,6 @@
                     </div>
                     <div class="values__list">
                     <div class="values__item expanded" data-value-image="assets/images/values-image.png">
-                        <div class="values__item-wrapper">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title">Authenticity</h3>
                                 <img src="assets/icons/collapse-icon.svg" alt="Collapse" class="values__item-icon">
@@ -1133,40 +1124,39 @@
                             <div class="values__item-description">
                                 <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
                             </div>
-                        </div>
                     </div>
                     <div class="values__divider"></div>
                     
                     <div class="values__item" data-value-image="assets/images/values-image.png">
-                        <div class="values__item-header">
-                            <h3 class="headline-h5 values__item-title">Open Minded</h3>
-                            <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
-                        </div>
-                        <div class="values__item-description">
-                            <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
-                        </div>
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title">Open Minded</h3>
+                                <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                            </div>
                     </div>
                     <div class="values__divider"></div>
                     
                     <div class="values__item" data-value-image="assets/images/values-image.png">
-                        <div class="values__item-header">
-                            <h3 class="headline-h5 values__item-title">Human Centric</h3>
-                            <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
-                        </div>
-                        <div class="values__item-description">
-                            <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
-                        </div>
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title">Human Centric</h3>
+                                <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                            </div>
                     </div>
                     <div class="values__divider"></div>
                     
                     <div class="values__item" data-value-image="assets/images/values-image.png">
-                        <div class="values__item-header">
-                            <h3 class="headline-h5 values__item-title">Trustworthy</h3>
-                            <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
-                        </div>
-                        <div class="values__item-description">
-                            <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
-                        </div>
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title">Trustworthy</h3>
+                                <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+                            </div>
                     </div>
                     </div>
                 </div>
