@@ -22,9 +22,16 @@
             --spacing-2: 16px;
             --spacing-2-05: 20px;
             --spacing-3: 24px;
+            --spacing-3-5: 28px;
             --spacing-4: 32px;
             --spacing-5: 40px;
+            --spacing-5-5: 44px;
+            --spacing-6: 48px;
+            --spacing-6-5: 52px;
+            --spacing-7: 56px;
             --spacing-10: 80px;
+            --spacing-12-5: 100px;
+            --spacing-17: 136px;
             /* Colors */
             --color-terracotta-600: #c33c1d;
             --color-warm-grey-100: #e9e8e1;
@@ -258,8 +265,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: var(--spacing-4) var(--spacing-3);
-            min-width: 100px;
+            padding: var(--spacing-3-5) var(--spacing-3);
+            min-width: var(--spacing-12-5);
             flex-shrink: 0;
             border: none;
             border-bottom: 2px solid transparent;
@@ -269,7 +276,7 @@
             background: transparent;
             color: var(--color-neutral-black);
             font-size: 16px;
-            gap: 10px;
+            gap: var(--spacing-1);
         }
         
         .tab-nav__item:hover {
@@ -332,7 +339,7 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: var(--spacing-1);
         }
         
         .about__image-container {
@@ -358,7 +365,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: var(--spacing-1);
         }
         
         .values__header {
@@ -432,7 +439,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 16px;
+            gap: var(--spacing-2);
             cursor: pointer;
             transition: opacity var(--transition-smooth);
         }
@@ -448,8 +455,8 @@
         }
         
         .values__item-icon {
-            width: 40px;
-            height: 40px;
+            width: var(--spacing-5);
+            height: var(--spacing-5);
             flex-shrink: 0;
         }
         
@@ -490,14 +497,14 @@
             max-width: 1360px;
             margin: 0 auto;
             display: flex;
-            gap: 136px;
+            gap: var(--spacing-17);
         }
         
         .benefits__content {
             width: 440px;
             flex-shrink: 0;
             position: sticky;
-            top: 100px;
+            top: var(--spacing-12-5);
             align-self: flex-start;
         }
         
@@ -527,7 +534,7 @@
             flex: 1;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
+            gap: var(--spacing-2);
             align-items: start;
         }
         
@@ -564,8 +571,8 @@
         }
         
         .benefits__amenity-icon {
-            width: 80px;
-            height: 80px;
+            width: var(--spacing-10);
+            height: var(--spacing-10);
             opacity: 0.8;
             filter: invert(35%) sepia(68%) saturate(1587%) hue-rotate(343deg) brightness(88%) contrast(90%);
         }
@@ -620,8 +627,8 @@
         }
         
         .stories__nav-button {
-            width: 56px;
-            height: 56px;
+            width: var(--spacing-7);
+            height: var(--spacing-7);
             border: none;
             background: none;
             padding: 0;
@@ -646,7 +653,7 @@
         
         .stories__carousel {
             display: flex;
-            gap: 16px;
+            gap: var(--spacing-2);
             overflow-x: auto;
             scroll-behavior: smooth;
             padding: 0 var(--spacing-5);
@@ -697,8 +704,8 @@
         }
         
         .stories__card-meta-icon {
-            width: 24px;
-            height: 24px;
+            width: var(--spacing-3);
+            height: var(--spacing-3);
         }
         
         .stories__indicator {
@@ -739,7 +746,7 @@
         }
         
         .footer__content {
-            padding: 100px var(--spacing-5) var(--spacing-3);
+            padding: var(--spacing-12-5) var(--spacing-5) var(--spacing-3);
             max-width: 1360px;
             margin: 0 auto;
         }
@@ -748,12 +755,12 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 50px;
+            margin-bottom: var(--spacing-6-5);
         }
         
         .footer__logo {
             width: 189px;
-            height: 80px;
+            height: var(--spacing-10);
             flex-shrink: 0;
         }
         
@@ -769,12 +776,12 @@
         
         .footer__social {
             display: flex;
-            gap: 10px;
+            gap: var(--spacing-1);
         }
         
         .footer__social-link {
-            width: 44px;
-            height: 44px;
+            width: var(--spacing-5-5);
+            height: var(--spacing-5-5);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -787,7 +794,7 @@
         .footer__divider {
             height: 1px;
             background-color: var(--color-border-tertiary);
-            margin-bottom: 15px;
+            margin-bottom: var(--spacing-2);
         }
         
         .footer__bottom {
@@ -798,7 +805,7 @@
         
         .footer__links {
             display: flex;
-            gap: 31px;
+            gap: var(--spacing-4);
         }
         
         .footer__link {
@@ -813,7 +820,7 @@
         .footer__copyright {
             font-family: 'Roboto', var(--font-body);
             font-size: 16px;
-            line-height: 44px;
+            line-height: var(--spacing-5-5);
         }
         
         /* Shared transitions */
@@ -971,8 +978,8 @@
             }
             
             .tab-nav__item {
-                padding: var(--spacing-3) var(--spacing-2);
-                min-width: 80px;
+                padding: var(--spacing-2) var(--spacing-2);
+                min-width: var(--spacing-10);
                 font-size: 14px;
             }
             
@@ -1026,8 +1033,8 @@
             }
             
             .stories__nav-button {
-                width: 48px;
-                height: 48px;
+                width: var(--spacing-6);
+                height: var(--spacing-6);
             }
             
             .stories__carousel {
