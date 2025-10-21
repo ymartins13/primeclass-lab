@@ -532,13 +532,14 @@
         
         .benefits__grid {
             flex: 1;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: var(--spacing-2);
-            align-items: start;
+            align-items: flex-start;
         }
         
         .benefits__amenity {
+            width: calc((100% - (var(--spacing-2) * 2)) / 3);
             aspect-ratio: 1;
             background-color: var(--color-warm-grey-100);
             padding: var(--spacing-3);
@@ -552,6 +553,11 @@
             overflow: hidden;
             cursor: pointer;
             transition: background-color var(--transition-fast);
+        }
+        
+        /* Efeito escada - deslocamento visual da coluna 2 sem afetar o layout */
+        .benefits__amenity:nth-child(3n+2) {
+            transform: translateY(92px);
         }
         
         .benefits__amenity:hover {
@@ -1016,7 +1022,22 @@
             }
             
             .benefits__grid {
-                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-2);
+                padding-bottom: 92px;
+            }
+            
+            .benefits__amenity {
+                width: calc((100% - var(--spacing-2)) / 2);
+            }
+            
+            /* Remove o transform do desktop */
+            .benefits__amenity:nth-child(3n+2) {
+                transform: none;
+            }
+            
+            /* Efeito escada mobile - apenas coluna 2 (itens pares) */
+            .benefits__amenity:nth-child(2n) {
+                transform: translateY(92px);
             }
             
             .stories {
