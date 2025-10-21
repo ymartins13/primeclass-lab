@@ -38,6 +38,9 @@
             /* Border Radius */
             --radius-small: 2px;
             --radius-full: 999px;
+            /* Transitions */
+            --transition-fast: 0.3s ease;
+            --transition-smooth: 0.4s ease;
         }
         
         /* ============================================
@@ -229,7 +232,7 @@
             position: sticky;
             top: 82px;
             z-index: 999;
-            transition: top 0.3s ease;
+            transition: top var(--transition-fast);
             padding: 0 var(--spacing-5);
         }
         
@@ -260,7 +263,7 @@
             flex-shrink: 0;
             border: none;
             border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
             white-space: nowrap;
             cursor: pointer;
             background: transparent;
@@ -431,7 +434,7 @@
             justify-content: flex-end;
             gap: 16px;
             cursor: pointer;
-            transition: opacity 0.4s ease;
+            transition: opacity var(--transition-smooth);
         }
         
         .values__item-header:hover {
@@ -453,7 +456,7 @@
         .values__item-description {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease;
+            transition: max-height var(--transition-smooth);
             text-align: right;
         }
         
@@ -514,7 +517,6 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.3s ease;
         }
         
         .benefits__button:hover, .stories__button:hover {
@@ -542,7 +544,7 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color var(--transition-fast);
         }
         
         .benefits__amenity:hover {
@@ -555,7 +557,6 @@
             align-items: center;
             justify-content: center;
             gap: var(--spacing-2);
-            transition: opacity 0.3s ease;
         }
         
         .benefits__amenity:hover .benefits__amenity-content {
@@ -584,7 +585,6 @@
             justify-content: center;
             padding: var(--spacing-3);
             opacity: 0;
-            transition: opacity 0.3s ease;
             color: var(--color-neutral-white);
             font-family: var(--font-body);
             font-size: 14px;
@@ -625,7 +625,6 @@
             border: none;
             background: none;
             padding: 0;
-            transition: opacity 0.3s ease;
         }
         
         .stories__nav-button:hover {
@@ -723,7 +722,7 @@
             height: 100%;
             background-color: var(--color-terracotta-600);
             width: 65%;
-            transition: width 0.3s ease;
+            transition: width var(--transition-fast);
         }
         
         .stories__cta {
@@ -756,7 +755,6 @@
             width: 189px;
             height: 80px;
             flex-shrink: 0;
-            transition: opacity 0.3s ease;
         }
         
         .footer__logo:hover {
@@ -780,7 +778,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.3s ease;
         }
         
         .footer__social-link:hover {
@@ -807,7 +804,6 @@
         .footer__link {
             font-size: 13px;
             line-height: 1.2;
-            transition: opacity 0.3s ease;
         }
         
         .footer__link:hover {
@@ -818,6 +814,18 @@
             font-family: 'Roboto', var(--font-body);
             font-size: 16px;
             line-height: 44px;
+        }
+        
+        /* Shared transitions */
+        .benefits__button,
+        .stories__button,
+        .benefits__amenity-content,
+        .benefits__amenity-description,
+        .stories__nav-button,
+        .footer__logo,
+        .footer__social-link,
+        .footer__link {
+            transition: opacity var(--transition-fast);
         }
         
         /* ============================================
@@ -886,7 +894,7 @@
                 transform: rotate(-2deg);
                 opacity: 0;
                 max-height: 0;
-                transition: all 0.4s ease;
+                transition: all var(--transition-smooth);
             }
             
             .values__item.expanded .values__item-image {
@@ -981,16 +989,7 @@
             }
             
             .about__content {
-                flex-direction: column;
                 gap: var(--spacing-3);
-            }
-            
-            .about__text-container {
-                width: 100%;
-            }
-            
-            .about__image-wrapper {
-                height: auto;
             }
             
             .values__header {
@@ -1006,18 +1005,10 @@
             }
             
             .values__item-image {
-                aspect-ratio: 480 / 636;
                 max-width: 280px;
-                margin: var(--spacing-3) auto 0;
-                border-radius: var(--radius-small);
-                transform: rotate(-2deg);
-                opacity: 0;
-                max-height: 0;
-                transition: all 0.4s ease;
             }
             
             .values__item.expanded .values__item-image {
-                opacity: 1;
                 max-height: 370px;
             }
             
