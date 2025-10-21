@@ -529,20 +529,6 @@
             align-items: start;
         }
         
-        .benefits__grid-column {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .benefits__grid-column:nth-child(2) {
-            margin-top: 92px;
-        }
-        
-        .benefits__grid-column:nth-child(3) {
-            margin-top: 32px;
-        }
-        
         .benefits__amenity {
             aspect-ratio: 1;
             background-color: var(--color-warm-grey-100);
@@ -923,15 +909,6 @@
                 position: static;
             }
             
-            .benefits__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .benefits__grid-column:nth-child(2),
-            .benefits__grid-column:nth-child(3) {
-                margin-top: 0;
-            }
-            
             .footer__top {
                 flex-direction: column;
                 gap: var(--spacing-5);
@@ -1045,7 +1022,7 @@
             }
             
             .benefits__grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .stories {
@@ -1221,91 +1198,85 @@
                 <button class="benefits__button button-text">Discover all our lounges</button>
             </div>
             <div class="benefits__grid">
-                <div class="benefits__grid-column">
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-1.svg" alt="A Warm Welcome" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">A Warm<br>Welcome</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Our team greets you with genuine warmth and hospitality from the moment you arrive.</p>
-                        </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-1.svg" alt="A Warm Welcome" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">A Warm<br>Welcome</p>
                     </div>
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-2.svg" alt="Open Buffet" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Open Buffet</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Enjoy a wide selection of fresh and delicious dishes prepared by our culinary team.</p>
-                        </div>
-                    </div>
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-3.svg" alt="Soft Beverages" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Soft Beverages</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Refresh yourself with a variety of soft drinks, juices, and specialty beverages.</p>
-                        </div>
+                    <div class="benefits__amenity-description">
+                        <p>Our team greets you with genuine warmth and hospitality from the moment you arrive.</p>
                     </div>
                 </div>
-                <div class="benefits__grid-column">
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-2.svg" alt="Alcohol" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Alcohol</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>A selection of wine, beers, spirits and soft drinks are available.</p>
-                        </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-2.svg" alt="Open Buffet" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Open Buffet</p>
                     </div>
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-3.svg" alt="Restroom" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Restroom</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Clean and modern facilities designed for your comfort and convenience.</p>
-                        </div>
-                    </div>
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-1.svg" alt="Wi-Fi" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Wi-Fi</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Stay connected with complimentary high-speed wireless internet access.</p>
-                        </div>
+                    <div class="benefits__amenity-description">
+                        <p>Enjoy a wide selection of fresh and delicious dishes prepared by our culinary team.</p>
                     </div>
                 </div>
-                <div class="benefits__grid-column">
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-3.svg" alt="Telephone" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Telephone</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Private telephone services available for your business and personal calls.</p>
-                        </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-3.svg" alt="Soft Beverages" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Soft Beverages</p>
                     </div>
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-2.svg" alt="Printer" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Printer</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Print, scan, and copy services to support your business needs while traveling.</p>
-                        </div>
+                    <div class="benefits__amenity-description">
+                        <p>Refresh yourself with a variety of soft drinks, juices, and specialty beverages.</p>
                     </div>
-                    <div class="benefits__amenity">
-                        <div class="benefits__amenity-content">
-                            <img src="assets/icons/amenity-icon-1.svg" alt="Newspaper & Magazine" class="benefits__amenity-icon">
-                            <p class="benefits__amenity-title">Newspaper & Magazine</p>
-                        </div>
-                        <div class="benefits__amenity-description">
-                            <p>Browse through a curated selection of international newspapers and magazines.</p>
-                        </div>
+                </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-2.svg" alt="Alcohol" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Alcohol</p>
+                    </div>
+                    <div class="benefits__amenity-description">
+                        <p>A selection of wine, beers, spirits and soft drinks are available.</p>
+                    </div>
+                </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-3.svg" alt="Restroom" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Restroom</p>
+                    </div>
+                    <div class="benefits__amenity-description">
+                        <p>Clean and modern facilities designed for your comfort and convenience.</p>
+                    </div>
+                </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-1.svg" alt="Wi-Fi" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Wi-Fi</p>
+                    </div>
+                    <div class="benefits__amenity-description">
+                        <p>Stay connected with complimentary high-speed wireless internet access.</p>
+                    </div>
+                </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-3.svg" alt="Telephone" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Telephone</p>
+                    </div>
+                    <div class="benefits__amenity-description">
+                        <p>Private telephone services available for your business and personal calls.</p>
+                    </div>
+                </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-2.svg" alt="Printer" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Printer</p>
+                    </div>
+                    <div class="benefits__amenity-description">
+                        <p>Print, scan, and copy services to support your business needs while traveling.</p>
+                    </div>
+                </div>
+                <div class="benefits__amenity">
+                    <div class="benefits__amenity-content">
+                        <img src="assets/icons/amenity-icon-1.svg" alt="Newspaper & Magazine" class="benefits__amenity-icon">
+                        <p class="benefits__amenity-title">Newspaper & Magazine</p>
+                    </div>
+                    <div class="benefits__amenity-description">
+                        <p>Browse through a curated selection of international newspapers and magazines.</p>
                     </div>
                 </div>
             </div>
