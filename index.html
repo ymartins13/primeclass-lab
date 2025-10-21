@@ -178,18 +178,18 @@
         .hero {
             position: relative;
             background-color: var(--color-terracotta-600);
-            min-height: 1090px;
+            height: 864px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            padding: 226px var(--spacing-5) 56px;
         }
         
         .hero__image-container {
             position: absolute;
-            inset: auto 0 0;
-            height: 810px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 264px;
             overflow: hidden;
         }
         
@@ -205,12 +205,14 @@
         }
         
         .hero__text {
-            position: relative;
+            position: absolute;
+            top: 264px;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 10;
             width: 100%;
             max-width: 1360px;
-            margin-bottom: -56px;
-            padding: 10px 0;
+            padding: 0 var(--spacing-5);
         }
         
         .hero__text h1 {
@@ -845,20 +847,7 @@
             .headline-h5 {
                 font-size: 60px;
             }
-            
-            .hero {
-                min-height: 800px;
-                padding: 150px var(--spacing-5) var(--spacing-5);
-            }
-            
-            .hero__image-container {
-                height: 600px;
-            }
-            
-            .hero__text {
-                margin-bottom: 0;
-            }
-            
+
             .about__content {
                 flex-direction: column;
                 gap: var(--spacing-5);
@@ -956,16 +945,16 @@
             }
             
             .hero {
-                min-height: 600px;
-                padding: 100px var(--spacing-3) var(--spacing-3);
+                height: 570px;
             }
             
             .hero__image-container {
-                height: 400px;
+                top: 170px;
             }
             
             .hero__text {
-                margin-bottom: 0;
+                top: 170px;
+                padding: 0 var(--spacing-3);
             }
             
             .tab-nav__container {
