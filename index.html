@@ -834,10 +834,6 @@
         
         /* Tablet */
         @media (max-width: 1023px) {
-            .headline-h1 {
-                font-size: 60px;
-            }
-            
             .headline-h3 {
                 font-size: 40px;
             }
@@ -889,9 +885,7 @@
                 width: 100%;
                 max-width: 400px;
                 aspect-ratio: 480 / 636;
-                margin: var(--spacing-3) auto 0;
                 border-radius: var(--radius-small);
-                transform: rotate(-2deg);
                 opacity: 0;
                 max-height: 0;
                 transition: all var(--transition-smooth);
@@ -900,6 +894,8 @@
             .values__item.expanded .values__item-image {
                 opacity: 1;
                 max-height: 530px;
+                margin: var(--spacing-3) auto 0;
+                transform: rotate(-2deg);
             }
             
             .values__item-image img {
