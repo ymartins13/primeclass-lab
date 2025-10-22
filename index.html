@@ -606,7 +606,7 @@
             gap: var(--spacing-2);
             overflow-x: auto;
             scroll-behavior: smooth;
-            padding: 0 var(--spacing-5);
+            padding: 0 var(--spacing-2);
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
         }
@@ -899,7 +899,6 @@
             
             .benefits__container {
                 flex-direction: column;
-                gap: var(--spacing-5);
             }
             
             .benefits__title {
@@ -908,11 +907,6 @@
             
             .benefits__content {
                 position: static;
-            }
-            
-            .stories__indicator {
-                width: 100%;
-                padding: var(--spacing-5) var(--spacing-5) 0;
             }
             
             .footer__bottom {
@@ -932,14 +926,6 @@
             .headline-h1 {
                 font-size: 48px;
                 letter-spacing: 0.96px;
-            }
-            
-            .headline-h3 {
-                font-size: 40px;
-            }
-            
-            .headline-h4 {
-                font-size: 28px;
             }
             
             .headline-h5 {
@@ -975,15 +961,10 @@
             .tab-nav__item {
                 padding: var(--spacing-2) var(--spacing-2);
                 min-width: var(--spacing-10);
-                font-size: 16px;
             }
             
             .about, .values, .benefits {
                 padding: var(--spacing-5) var(--spacing-2);
-            }
-            
-            .about {
-                gap: var(--spacing-5);
             }
             
             .about__content {
@@ -1009,25 +990,6 @@
             
             .benefits__amenities-list {
                 grid-template-columns: 1fr;
-            }
-            
-            .benefits__grid {
-                gap: var(--spacing-2);
-                padding-bottom: 92px;
-            }
-            
-            .benefits__amenity {
-                width: calc((100% - var(--spacing-2)) / 2);
-            }
-            
-            /* Remove o transform do desktop */
-            .benefits__amenity:nth-child(3n+2) {
-                transform: none;
-            }
-            
-            /* Efeito escada mobile - apenas coluna 2 (itens pares) */
-            .benefits__amenity:nth-child(2n) {
-                transform: translateY(92px);
             }
             
             .stories {
