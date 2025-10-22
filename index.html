@@ -596,12 +596,9 @@
         }
         
         .stories__carousel-wrapper {
-            margin-bottom: var(--spacing-4);
             max-width: 1440px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             overflow: hidden;
-            padding: 0 var(--spacing-5);
         }
         
         .stories__carousel {
@@ -609,6 +606,7 @@
             gap: var(--spacing-2);
             overflow-x: auto;
             scroll-behavior: smooth;
+            padding: 0 var(--spacing-5);
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
         }
@@ -667,10 +665,10 @@
         }
         
         .stories__indicator {
-            width: 900px;
-            max-width: 100%;
-            margin: 0 auto var(--spacing-3);
-            padding: var(--spacing-3) 0;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: var(--spacing-5) var(--spacing-5) 0;
         }
         
         .stories__indicator-track {
@@ -910,6 +908,11 @@
             
             .benefits__content {
                 position: static;
+            }
+            
+            .stories__indicator {
+                width: 100%;
+                padding: var(--spacing-5) var(--spacing-5) 0;
             }
             
             .footer__bottom {
