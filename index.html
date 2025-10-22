@@ -582,10 +582,16 @@
             border: none;
             background: none;
             padding: 0;
+            transition: background-color var(--transition-fast);
+            border-radius: 50%;
         }
         
         .stories__nav-button:hover {
-            opacity: 0.8;
+            background-color: var(--color-warm-grey-100);
+        }
+        
+        .stories__nav-button:active {
+            background-color: var(--color-border-secondary);
         }
         
         .stories__nav-button--prev {
