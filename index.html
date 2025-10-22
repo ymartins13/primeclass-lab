@@ -129,7 +129,7 @@
         }
         
         .body-large {
-            font-size: 18px;
+            font-size: 16px;
         }
         
         .body-default {
@@ -137,11 +137,11 @@
         }
         
         .body-small {
-            font-size: 14px;
+            font-size: 16px;
         }
         
         .title-small {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             line-height: 1.2;
         }
@@ -381,7 +381,7 @@
         }
         
         .values__intro {
-            font-size: 18px;
+            font-size: 16px;
         }
         
         .values__details {
@@ -458,6 +458,7 @@
         
         .values__item.expanded .values__item-description {
             max-height: 400px;
+            padding: 16px 0;
         }
         
         .values__item-text {
@@ -599,6 +600,8 @@
             max-width: 1440px;
             margin-left: auto;
             margin-right: auto;
+            overflow: hidden;
+            padding: 0 var(--spacing-5);
         }
         
         .stories__carousel {
@@ -606,7 +609,6 @@
             gap: var(--spacing-2);
             overflow-x: auto;
             scroll-behavior: smooth;
-            padding: 0 var(--spacing-5);
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
         }
@@ -619,6 +621,11 @@
             flex: 0 0 328px;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .stories__card:hover .stories__card-image-wrapper {
+            transform: scale(1.05);
         }
         
         .stories__card-image-wrapper {
@@ -626,6 +633,7 @@
             border-radius: var(--radius-small);
             overflow: hidden;
             margin-bottom: var(--spacing-2);
+            transition: transform var(--transition-smooth);
         }
         
         
@@ -964,7 +972,7 @@
             .tab-nav__item {
                 padding: var(--spacing-2) var(--spacing-2);
                 min-width: var(--spacing-10);
-                font-size: 14px;
+                font-size: 16px;
             }
             
             .about, .values, .benefits {
@@ -1031,10 +1039,6 @@
             .stories__nav-button {
                 width: var(--spacing-6);
                 height: var(--spacing-6);
-            }
-            
-            .stories__carousel {
-                padding: 0 var(--spacing-2);
             }
             
             .stories__card {
