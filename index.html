@@ -481,121 +481,73 @@
         .benefits {
             padding: var(--spacing-10) var(--spacing-5);
         }
-        
+
         .benefits__container {
             max-width: 1360px;
             margin: 0 auto;
             display: flex;
-            gap: 136px;
-        }
-        
-        .benefits__content {
-            width: 440px;
-            flex-shrink: 0;
-            position: sticky;
-            top: 182px;
-            align-self: flex-start;
-        }
-        
-        .benefits__title {
-            margin-bottom: var(--spacing-3);
-            letter-spacing: 5.76px;
-        }
-        
-        .benefits__description {
-            margin-bottom: var(--spacing-5);
-        }
-        
-        .benefits__button, .stories__button {
-            background-color: var(--color-terracotta-600);
-            color: var(--color-neutral-white);
-            padding: var(--spacing-2-05) var(--spacing-4);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .benefits__button:hover, .stories__button:hover {
-            opacity: 0.9;
-        }
-        
-        .benefits__grid {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-2);
+            gap: 20px;
             align-items: flex-start;
         }
-        
-        .benefits__amenity {
-            width: calc((100% - (var(--spacing-2) * 2)) / 3);
-            aspect-ratio: 1;
-            background-color: var(--color-warm-grey-100);
-            padding: var(--spacing-3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+
+        .benefits__title {
+            color: var(--color-terracotta-600);
+            width: 440px;
+            flex-shrink: 0;
+        }
+
+        .benefits__amenities-list {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-2);
-            text-align: center;
+        }
+
+        .benefits__amenity-item {
+            display: flex;
+            gap: 8px;
+            height: 58px;
+            align-items: center;
+            padding: var(--spacing-2) var(--spacing-2);
             position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: background-color var(--transition-fast);
+            border-radius: 4px;
+            flex-shrink: 0;
+            width: 100%;
         }
-        
-        /* Efeito escada - deslocamento visual da coluna 2 sem afetar o layout */
-        .benefits__amenity:nth-child(3n+2) {
-            transform: translateY(92px);
-        }
-        
-        .benefits__amenity:hover {
-            background-color: var(--color-terracotta-600);
-        }
-        
-        .benefits__amenity-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: var(--spacing-2);
-        }
-        
-        .benefits__amenity:hover .benefits__amenity-content {
-            opacity: 0;
-        }
-        
-        .benefits__amenity-icon {
-            width: var(--spacing-10);
-            height: var(--spacing-10);
+
+        .benefits__amenity-icon-wrapper {
             opacity: 0.8;
-            filter: invert(35%) sepia(68%) saturate(1587%) hue-rotate(343deg) brightness(88%) contrast(90%);
-        }
-        
-        .benefits__amenity-title {
-            font-family: var(--font-headline);
-            font-size: 16.92px;
-            line-height: 1.2;
-            letter-spacing: 0.34px;
-        }
-        
-        .benefits__amenity-description {
-            position: absolute;
-            inset: 0;
+            overflow: visible;
+            position: relative;
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: var(--spacing-3);
-            opacity: 0;
-            color: var(--color-neutral-white);
-            font-family: var(--font-body);
-            font-size: 14px;
-            line-height: 1.5;
-            text-align: center;
         }
-        
-        .benefits__amenity:hover .benefits__amenity-description {
-            opacity: 1;
+
+        .benefits__amenity-icon {
+            max-width: 32px;
+            max-height: 32px;
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .benefits__amenity-text {
+            flex-basis: 0;
+            font-family: var(--font-body);
+            font-weight: 400;
+            flex-grow: 1;
+            line-height: 1.5;
+            min-width: 0;
+            min-height: 0;
+            position: relative;
+            font-size: 16px;
+            color: var(--color-neutral-black);
+            flex-shrink: 0;
         }
         
         /* ============================================
@@ -944,6 +896,10 @@
                 gap: var(--spacing-5);
             }
             
+            .benefits__title {
+                width: 100%;
+            }
+            
             .benefits__content {
                 position: static;
             }
@@ -1038,6 +994,10 @@
             .values__item.expanded .values__item-image {
                 max-height: 370px;
                 padding-bottom: var(--spacing-2);
+            }
+            
+            .benefits__amenities-list {
+                grid-template-columns: 1fr;
             }
             
             .benefits__grid {
@@ -1235,96 +1195,58 @@
     </section>
 
     <!-- Benefits Section -->
+    <!-- Benefits Section -->
     <section class="benefits" id="benefits">
         <div class="benefits__container">
-            <div class="benefits__content">
-                <h2 class="headline-h3 benefits__title">Benifits</h2>
-                <div class="benefits__description body-large">
-                    <p>Our premium experience design is built around lifestyle-driven choices, ensuring that every aspect of the traveler's journey is thoughtfully planned.</p>
-                    <p>&nbsp;</p>
-                    <p>From relaxation spaces to curated culinary offerings, Primeclass's globally curated journey provides an unparalleled sense of ease and sophistication.</p>
-                </div>
-            </div>
-            <div class="benefits__grid">
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-1.svg" alt="A Warm Welcome" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">A Warm<br>Welcome</p>
+            <h2 class="headline-h3 benefits__title">Explore our amenities</h2>
+            <div class="benefits__amenities-list">
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-7.svg" alt="A Warm Welcome" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">A warm welcome</p>
                     </div>
-                    <div class="benefits__amenity-description">
-                        <p>Our team greets you with genuine warmth and hospitality from the moment you arrive.</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-6.svg" alt="Alcohol" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Alcohol</p>
                     </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-2.svg" alt="Open Buffet" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Open Buffet</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-5.svg" alt="Telephone" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Telephone</p>
                     </div>
-                    <div class="benefits__amenity-description">
-                        <p>Enjoy a wide selection of fresh and delicious dishes prepared by our culinary team.</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-4.svg" alt="Open Buffet" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Open Buffet</p>
                     </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-3.svg" alt="Soft Beverages" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Soft Beverages</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-3.svg" alt="Printer" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Printer</p>
                     </div>
-                    <div class="benefits__amenity-description">
-                        <p>Refresh yourself with a variety of soft drinks, juices, and specialty beverages.</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-2.svg" alt="Newspaper & Magazine" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Newspaper & Magazine</p>
                     </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-2.svg" alt="Alcohol" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Alcohol</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-7.svg" alt="Soft Beverages" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Soft Beverages</p>
                     </div>
-                    <div class="benefits__amenity-description">
-                        <p>A selection of wine, beers, spirits and soft drinks are available.</p>
-                    </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-3.svg" alt="Restroom" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Restroom</p>
-                    </div>
-                    <div class="benefits__amenity-description">
-                        <p>Clean and modern facilities designed for your comfort and convenience.</p>
-                    </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-1.svg" alt="Wi-Fi" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Wi-Fi</p>
-                    </div>
-                    <div class="benefits__amenity-description">
-                        <p>Stay connected with complimentary high-speed wireless internet access.</p>
-                    </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-3.svg" alt="Telephone" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Telephone</p>
-                    </div>
-                    <div class="benefits__amenity-description">
-                        <p>Private telephone services available for your business and personal calls.</p>
-                    </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-2.svg" alt="Printer" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Printer</p>
-                    </div>
-                    <div class="benefits__amenity-description">
-                        <p>Print, scan, and copy services to support your business needs while traveling.</p>
-                    </div>
-                </div>
-                <div class="benefits__amenity">
-                    <div class="benefits__amenity-content">
-                        <img src="assets/icons/amenity-icon-1.svg" alt="Newspaper & Magazine" class="benefits__amenity-icon">
-                        <p class="benefits__amenity-title">Newspaper & Magazine</p>
-                    </div>
-                    <div class="benefits__amenity-description">
-                        <p>Browse through a curated selection of international newspapers and magazines.</p>
+                    <div class="benefits__amenity-item">
+                        <div class="benefits__amenity-icon-wrapper">
+                            <img src="assets/icons/amenity-1.svg" alt="Wi-Fi" class="benefits__amenity-icon">
+                        </div>
+                        <p class="benefits__amenity-text">Wi-Fi</p>
                     </div>
                 </div>
             </div>
