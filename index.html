@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Primeclass VIP Lounge - Premium airport lounge experience across 19 countries with personalized services and authentic hospitality.">
-    <title>Primeclass Lounge</title>
+    <meta name="description" content="Primeclass - Premium airport lounge experience across 19 countries with personalized services and authentic hospitality.">
+    <title>Primeclass</title>
     
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     
@@ -117,8 +117,9 @@
         }
         
         .headline-h5 {
-            font-size: 80px;
-            line-height: 1.2;
+            font-size: 84px;
+            line-height: 1.1;
+            letter-spacing: 1.68px;
         }
         
         .headline-h6 {
@@ -211,7 +212,12 @@
             object-fit: cover;
         }
         
-        .hero__image, .about__image {
+        .hero__image {
+            object-position: 50% 25%;
+            pointer-events: none;
+        }
+        
+        .about__image {
             object-position: 50% 50%;
             pointer-events: none;
         }
@@ -382,7 +388,6 @@
             background-color: var(--color-neutral-white);
             display: flex;
             flex-direction: column;
-            height: 760px;
             align-items: flex-start;
             justify-content: space-between;
             max-width: 1360px;
@@ -392,29 +397,25 @@
         }
         
         .values__details-container {
-            position: relative;
+            display: flex;
+            gap: var(--spacing-5);
             width: 100%;
-            height: 600px;
+            align-items: flex-start;
         }
         
         .values__image-wrapper {
-            position: absolute;
-            left: 0;
-            top: -17px;
             width: 480px;
             height: 636px;
             transform: rotate(-2deg);
             overflow: hidden;
             border-radius: var(--radius-small);
+            flex-shrink: 0;
         }
         
         
         .values__list {
-            position: absolute;
-            right: 0;
-            top: 58px;
-            width: 784px;
-            max-width: calc(100% - 500px);
+            flex: 1;
+            max-width: 784px;
         }
         
         .values__item {
@@ -438,7 +439,6 @@
             color: var(--color-terracotta-600);
             text-align: right;
             flex: 1;
-            white-space: nowrap;
         }
         
         .values__item-icon {
@@ -451,16 +451,18 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height var(--transition-smooth);
-            text-align: right;
+            text-align: left;
+            display: flex;
+            justify-content: flex-end;
         }
         
         .values__item.expanded .values__item-description {
-            max-height: 200px;
+            max-height: 400px;
         }
         
         .values__item-text {
-            max-width: 441px;
-            margin-left: auto;
+            width: 60%;
+            text-align: left;
         }
         
         .values__divider {
@@ -642,6 +644,9 @@
         
         .stories__carousel-wrapper {
             margin-bottom: var(--spacing-4);
+            max-width: 1440px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .stories__carousel {
@@ -846,7 +851,10 @@
             }
             
             .values__item-title {
-                font-size: 36px;
+                font-size: 39px;
+                line-height: 1.2;
+                letter-spacing: 0.78px;
+                text-align: left;
             }
 
             .about__content {
@@ -896,15 +904,13 @@
                 justify-content: flex-start;
             }
             
-            .values__item-title {
-                text-align: left;
-            }
-            
             .values__item-description {
                 text-align: left;
+                margin-top: var(--spacing-2);
             }
             
             .values__item-text {
+                width: 100%;
                 margin-left: 0;
                 max-width: 100%;
             }
@@ -992,6 +998,7 @@
             
             .tab-nav {
                 padding: 0;
+                top: 130px;
             }
             
             .tab-nav__container {
@@ -1024,16 +1031,13 @@
                 padding-bottom: var(--spacing-5);
             }
             
-            .values__item-title {
-                font-size: 36px;
-            }
-            
             .values__item-image {
                 max-width: 280px;
             }
             
             .values__item.expanded .values__item-image {
                 max-height: 370px;
+                padding-bottom: var(--spacing-2);
             }
             
             .benefits__grid {
