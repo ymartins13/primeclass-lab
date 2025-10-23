@@ -454,18 +454,16 @@
             text-align: left;
             display: flex;
             justify-content: flex-end;
-            padding: 0;
         }
         
         .values__item.expanded .values__item-description {
             max-height: 400px;
-            padding-top: 16px;
-            padding-bottom: 16px;
         }
         
         .values__item-text {
             width: 60%;
             text-align: left;
+            padding-top: 16px;
         }
         
         .values__divider {
@@ -872,13 +870,6 @@
             
             .values__item-description {
                 text-align: left;
-                margin-top: 0;
-            }
-            
-            .values__item.expanded .values__item-description {
-                padding-top: 0;
-                padding-bottom: 0;
-                margin-top: var(--spacing-2);
             }
             
             .values__item-text {
@@ -994,13 +985,7 @@
             }
             
             .values__item-description {
-                margin-top: 0;
-            }
-            
-            .values__item.expanded .values__item-description {
-                padding-top: 0;
-                padding-bottom: 0;
-                margin-top: var(--spacing-2);
+
             }
             
             .values__item-image {
@@ -1444,20 +1429,28 @@
         
         valuesItems.forEach(item => {
             item.querySelector('.values__item-header').addEventListener('click', () => {
-                if (item.classList.contains('expanded')) return;
+                const isExpanded = item.classList.contains('expanded');
                 
-                valuesItems.forEach(otherItem => {
-                    otherItem.classList.remove('expanded');
-                    otherItem.querySelector('.values__item-icon').src = 'assets/icons/expand-icon.svg';
-                });
-                
-                item.classList.add('expanded');
-                item.querySelector('.values__item-icon').src = 'assets/icons/collapse-icon.svg';
-                
-                // Update image based on selected item
-                const newImageSrc = item.getAttribute('data-value-image');
-                if (newImageSrc && valuesImage) {
-                    valuesImage.src = newImageSrc;
+                if (isExpanded) {
+                    // Close the currently expanded item
+                    item.classList.remove('expanded');
+                    item.querySelector('.values__item-icon').src = 'assets/icons/expand-icon.svg';
+                } else {
+                    // Close all other items
+                    valuesItems.forEach(otherItem => {
+                        otherItem.classList.remove('expanded');
+                        otherItem.querySelector('.values__item-icon').src = 'assets/icons/expand-icon.svg';
+                    });
+                    
+                    // Open the clicked item
+                    item.classList.add('expanded');
+                    item.querySelector('.values__item-icon').src = 'assets/icons/collapse-icon.svg';
+                    
+                    // Update image based on selected item
+                    const newImageSrc = item.getAttribute('data-value-image');
+                    if (newImageSrc && valuesImage) {
+                        valuesImage.src = newImageSrc;
+                    }
                 }
             });
         });
