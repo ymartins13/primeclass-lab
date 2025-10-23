@@ -886,7 +886,9 @@
                 border-radius: var(--radius-small);
                 opacity: 0;
                 max-height: 0;
-                transition: all var(--transition-smooth);
+                margin: 0 auto;
+                overflow: hidden;
+                transition: opacity var(--transition-smooth), max-height var(--transition-smooth), margin var(--transition-smooth), transform var(--transition-smooth);
             }
             
             .values__item.expanded .values__item-image {
@@ -982,10 +984,6 @@
             
             .values__details {
                 padding-bottom: var(--spacing-5);
-            }
-            
-            .values__item-description {
-
             }
             
             .values__item-image {
