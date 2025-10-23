@@ -446,6 +446,11 @@
             width: var(--spacing-5);
             height: var(--spacing-5);
             flex-shrink: 0;
+            transition: transform var(--transition-smooth);
+        }
+        
+        .values__item.expanded .values__item-icon {
+            transform: rotate(45deg);
         }
         
         .values__item-description {
@@ -1126,7 +1131,7 @@
                     <div class="values__item expanded" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title">Staying Tuned</h3>
-                                <img src="assets/icons/collapse-icon.svg" alt="Collapse" class="values__item-icon">
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
                                 <p class="body-large values__item-text">We believe staying contemporary is key to offering exceptional experiences. By embracing innovation, we keep pace with today’s evolving traveler needs. We ensure that every journey is modern, efficient, and in tune with the latest trends.</p>
@@ -1140,7 +1145,7 @@
                     <div class="values__item" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title">Collective Experience</h3>
-                                <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
                                 <p class="body-large values__item-text">Primeclass is a vibrant hub where travelers of all backgrounds connect. We believe in creating spaces that foster social connection and a sense of belonging. Every touchpoint is designed to make you feel at home while offering a premium experience.</p>
@@ -1154,7 +1159,7 @@
                     <div class="values__item" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title">Human Touch</h3>
-                                <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
                                 <p class="body-large values__item-text">At Primeclass, we focus on meaningful human interactions. Genuine smiles, personalized service, and attentiveness make every moment special. We believe that these small touches create lasting connections that elevate the journey.</p>
@@ -1168,7 +1173,7 @@
                     <div class="values__item" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title">Better Future</h3>
-                                <img src="assets/icons/expand-icon.svg" alt="Expand" class="values__item-icon">
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
                                 <p class="body-large values__item-text">We are committed to sustainability and innovation, aligning our services with forward-thinking solutions. By adopting eco-friendly practices, we shape a better future while continuing to offer exceptional experiences. We aim to minimize our environmental impact while staying ahead of industry trends.</p>
@@ -1449,17 +1454,14 @@
                 if (isExpanded) {
                     // Close the currently expanded item
                     item.classList.remove('expanded');
-                    item.querySelector('.values__item-icon').src = 'assets/icons/expand-icon.svg';
                 } else {
                     // Close all other items
                     valuesItems.forEach(otherItem => {
                         otherItem.classList.remove('expanded');
-                        otherItem.querySelector('.values__item-icon').src = 'assets/icons/expand-icon.svg';
                     });
                     
                     // Open the clicked item
                     item.classList.add('expanded');
-                    item.querySelector('.values__item-icon').src = 'assets/icons/collapse-icon.svg';
                     
                     // Update image based on selected item
                     const newImageSrc = item.getAttribute('data-value-image');
