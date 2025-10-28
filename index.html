@@ -91,16 +91,9 @@
         /* ============================================
            TYPOGRAPHY
            ============================================ */
-        .headline-h1, .headline-h3, .headline-h4, .headline-h5, .headline-h6, .button-text {
+        .headline-h3, .headline-h4, .headline-h5, .headline-h6, .button-text {
             font-family: var(--font-headline);
             font-weight: 400;
-        }
-        
-        .headline-h1 {
-            font-size: 84px;
-            line-height: 1.1;
-            letter-spacing: 1.68px;
-            text-transform: uppercase;
         }
         
         .headline-h3 {
@@ -221,22 +214,6 @@
         .about__image {
             object-position: 50% 50%;
             pointer-events: none;
-        }
-        
-        .hero__text {
-            position: absolute;
-            top: 264px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            width: 100%;
-            max-width: 1360px;
-            padding: 0 var(--spacing-5);
-        }
-        
-        .hero__text h1 {
-            color: var(--color-neutral-white);
-            width: 100%;
         }
         
         /* ============================================
@@ -943,11 +920,6 @@
         
         /* Mobile */
         @media (max-width: 767px) {
-            .headline-h1 {
-                font-size: 48px;
-                letter-spacing: 0.96px;
-            }
-            
             .header {
                 padding: var(--spacing-5) var(--spacing-2);
             }
@@ -958,11 +930,6 @@
             
             .hero__image-container {
                 top: 170px;
-            }
-            
-            .hero__text {
-                top: 170px;
-                padding: 0 var(--spacing-2);
             }
             
             .tab-nav {
@@ -1078,9 +1045,6 @@
         <div class="hero__image-container">
             <img src="assets/images/hero-background.png" alt="" class="hero__image">
         </div>
-        <div class="hero__text">
-            <h1 class="headline-h1">Our story</h1>
-        </div>
     </section>
 
     <!-- Tab Navigation -->
@@ -1098,8 +1062,8 @@
         <div class="about__content">
             <h2 class="headline-h3 about__title">About</h2>
             <div class="about__text-container">
-                <h3 class="headline-h4">With nearly 90 lounges across 19 countries, we are proud to be a leading operator of airport services.</h3>
-                <p class="body-default">We believe personalised services and authenticity make every moment special. We know that those small touches create lasting connections to elevate the journey.</p>
+                <h3 class="headline-h4">At Primeclass, we believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations.</h3>
+                <p class="body-default">Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. Primeclass embodies a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments. From lively social hubs to quiet corners for rest, every environment balances comfort, connection, and inspiration through thoughtful details and culturally rooted design.</p>
             </div>
         </div>
         <div class="about__image-wrapper">
@@ -1184,58 +1148,45 @@
     </section>
 
     <!-- Benefits Section -->
-    <!-- Benefits Section -->
     <section class="benefits" id="benefits">
         <div class="benefits__container">
-            <h2 class="headline-h3 benefits__title">Explore our amenities</h2>
+            <h2 class="headline-h3 benefits__title">The Primeclass Experience</h2>
             <div class="benefits__amenities-list">
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-7.svg" alt="A Warm Welcome" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-armchair.svg" alt="Lounge" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">A warm welcome</p>
+                        <p class="benefits__amenity-text">Lounge</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-6.svg" alt="Alcohol" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-speedometer.svg" alt="Fast Track" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Alcohol</p>
+                        <p class="benefits__amenity-text">Fast Track</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-5.svg" alt="Telephone" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-drink.svg" alt="Meet & Greet" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Telephone</p>
+                        <p class="benefits__amenity-text">Meet & Greet</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-4.svg" alt="Open Buffet" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-tray.svg" alt="Porter" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Open Buffet</p>
+                        <p class="benefits__amenity-text">Porter</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-3.svg" alt="Printer" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-car-luggage.svg" alt="Vale" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Printer</p>
+                        <p class="benefits__amenity-text">Vale</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-2.svg" alt="Newspaper & Magazine" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-letter-p.svg" alt="Car Park" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Newspaper & Magazine</p>
-                    </div>
-                    <div class="benefits__amenity-item">
-                        <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-7.svg" alt="Soft Beverages" class="benefits__amenity-icon">
-                        </div>
-                        <p class="benefits__amenity-text">Soft Beverages</p>
-                    </div>
-                    <div class="benefits__amenity-item">
-                        <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-1.svg" alt="Wi-Fi" class="benefits__amenity-icon">
-                        </div>
-                        <p class="benefits__amenity-text">Wi-Fi</p>
+                        <p class="benefits__amenity-text">Car Park</p>
                     </div>
                 </div>
             </div>
