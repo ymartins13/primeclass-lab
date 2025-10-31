@@ -193,10 +193,12 @@
         .hero__image-container {
             position: absolute;
             bottom: 0;
-            left: 0;
-            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
             top: 264px;
             overflow: hidden;
+            max-width: 1440px;
+            width: 100%;
         }
         
         .hero__image, .values__image, .stories__card-image {
@@ -207,7 +209,7 @@
         }
         
         .hero__image {
-            object-position: 50% 25%;
+            object-position: center center;
             pointer-events: none;
         }
         
@@ -1043,7 +1045,7 @@
     <!-- Hero Banner -->
     <section class="hero" id="hero">
         <div class="hero__image-container">
-            <img src="assets/images/hero-background.png" alt="" class="hero__image">
+            <img src="assets/images/hero-background.jpg" alt="" class="hero__image">
         </div>
     </section>
 
@@ -1062,8 +1064,9 @@
         <div class="about__content">
             <h2 class="headline-h3 about__title">About</h2>
             <div class="about__text-container">
-                <h3 class="headline-h4">At Primeclass, we believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations.</h3>
-                <p class="body-default">Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. Primeclass embodies a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments. From lively social hubs to quiet corners for rest, every environment balances comfort, connection, and inspiration through thoughtful details and culturally rooted design.</p>
+                <h3 class="headline-h4">More Than Transit - A Moment in Itself</h3>
+                <p class="body-default">We believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations. Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. We embody a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments.</p>
+                <p class="body-default">Welcome to Primeclass. Your journey begins here.</p>
             </div>
         </div>
         <div class="about__image-wrapper">
@@ -1178,9 +1181,9 @@
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
-                            <img src="assets/icons/amenity-car-luggage.svg" alt="Vale" class="benefits__amenity-icon">
+                            <img src="assets/icons/amenity-car-luggage.svg" alt="Valet" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Vale</p>
+                        <p class="benefits__amenity-text">Valet</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
